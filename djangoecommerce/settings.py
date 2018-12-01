@@ -142,6 +142,11 @@ EMAIL_HOST_PASSWORD = ''
 DEFAULT_FROM_EMAIL = 'admin@djangoecommerce.com'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+# auth
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_URL = 'logout'
+
 try:
     from .local_settings import *
 except ImportError:
