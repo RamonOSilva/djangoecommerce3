@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
+from django.views.static import serve as serve_static
 
 from core import views
-from catalog import views as views_catalog
+
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
