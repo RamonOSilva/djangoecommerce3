@@ -111,7 +111,13 @@ class Order(models.Model):
             self.status = 2
         self.save()
 
+    def complete(self):
+        self.status = 1
+        self.save()
+
     def pagseguro(self):
+        self.payment_option = 'pagseguro'
+        self.save()
         pg = PagSeguro(
             email=settings.PAGSEGURO_EMAIL, token=settings.PAGSEGURO_TOKEN,
             config={'sandbox': settings.PAGSEGURO_SANDBOX}
@@ -134,6 +140,8 @@ class Order(models.Model):
         return pg
 
     def paypal(self):
+        self.payment_option = 'paypal'
+        self.save()
         paypal_dict = {
             'upload': '1',
             'business': settings.PAYPAL_EMAIL,
