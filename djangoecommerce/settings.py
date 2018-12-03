@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # libs
     'widget_tweaks',
+    'easy_thumbnails',
     'paypal.standard.ipn',
     # apps
     'core',
@@ -131,14 +132,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+MEDIA_URL = '/media/'
 
 ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # E-mail
 EMAIL_HOST = ''
@@ -174,6 +179,13 @@ PAGSEGURO_SANDBOX = True
 
 PAYPAL_TEST = True
 PAYPAL_EMAIL = 'ramondeosilva@gmail.com'
+
+# Thumbnails
+THUMBNAIL_ALIASES = {
+    '': {
+        'product_image': {'size': (285, 160), 'crop': True},
+    },
+}
 
 try:
     from .local_settings import *
