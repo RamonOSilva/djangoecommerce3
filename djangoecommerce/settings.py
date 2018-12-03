@@ -171,6 +171,9 @@ PAGSEGURO_TOKEN = '3889EDB1CA8F43A0A2D67A892DB514DD'
 PAGSEGURO_EMAIL = 'ramondeosilva@gmail.com'
 PAGSEGURO_SANDBOX = True
 
+PAYPAL_TEST = True
+PAYPAL_EMAIL = 'ramondeosilva@gmail.com'
+
 try:
     from .local_settings import *
 except ImportError:
