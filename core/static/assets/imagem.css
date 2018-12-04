@@ -1,0 +1,17 @@
+#idUm {
+  background-image: url(home.png);
+  background-repeat: no-repeat;
+  width: 1140px;
+  height: 333px;
+}
+
+#idDois {
+  background-color: #F37000; 
+}
+
+#idTres {
+  background-color: #F37000; 
+  background-image: url(logo.png);
+  width: 202px;
+  height: 60px;
+}
