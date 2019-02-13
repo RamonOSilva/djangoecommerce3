@@ -1,7 +1,7 @@
 {% load thumbnail %}
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-        <a href="{{ product.get_absolute_url }}">
+        <a href="#">
             {% if product.image %}
             <img src="{{ product.image|thumbnail_url:'product_image' }}" alt="" />
             {% else %}

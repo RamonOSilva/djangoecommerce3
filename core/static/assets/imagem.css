@@ -17,14 +17,12 @@
 }
 
 #idPagSeguro {
-  background-color: #000; 
   background-image: url(pagseguro.jpg);
   width: 148px;
   height: 45px;
 }
 
 #idPayPal {
-  background-color: #F37000; 
   background-image: url(paypal.png);
   width: 148px;
   height: 45px;
