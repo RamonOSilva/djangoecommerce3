@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt:400,700');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:400');
+
+body {
+   background: url("bluebg.png") no-repeat center center fixed;
+   background-size: cover;
+}
+
+.modal-out{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(0,0,0,0.5);
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+}
+
+.modal-in {
+   font-family: 'Prompt', sans-serif;
+   border-radius: 30px;
+   background-color: #E5E5E5;
+   box-shadow: 2px 2px 35px #000;
+   height: 470px;
+   width: 560px;
+   padding: 25px;
+   margin: 15% auto; 
+}
+
+.confirm {
+   font-family: 'Prompt', sans-serif;
+   width: 57%;
+   margin-top: 26px;
+   color: white;
+   background-color: #F15A25;
+   border-radius: 8px;
+   border-color: #ff713f;
+   font-size: 40px;
+   box-shadow:0 5px #BD4A2F;
+}
+	
+.confirm:hover {
+
+    background-color: #c64c21;
+    color: white;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.confirm:active {
+  background-color: #c64c21;
+  box-shadow: 0 2px #c64c21;
+  transform: translateY(1px);
+}
+
+.window-content{
+ padding-left: 10%;
+ padding-top: 5%;
+}
+
+h2{
+   font-size: 55px;
+   margin: 0;
+   font-weight:700;
+}
+
+p{
+   font-family: 'Alegreya Sans', sans-serif;
+   font-size: 30px;
+   margin-left: 5px;
+   font-weight:400;
+   display: table-cell;
+   padding-bottom: 30px;
+}
+
+.procode {
+   margin-right: 75px;
+}
+
+
